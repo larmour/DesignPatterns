@@ -34,5 +34,5 @@ include ('MovieSingleton.php');
 
   function writeln($line_in) {
     echo $line_in.'<br/>';
-
+  }
 ?>
