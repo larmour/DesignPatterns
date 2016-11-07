@@ -1,9 +1,9 @@
 <?php
-clas MovieRenter {
+class MovieRenter {
   private $movieRented;
   private $movieavailable = FALSE;
    
-  function __constructor() {
+  function __construct() {
   }
   
   function getDirectorandMovieNameandcastStar() {
@@ -17,8 +17,9 @@ clas MovieRenter {
    }
    
    function movieRented() {
-     $this->movieavailable == NULL) {
-       $this->haveBook = FALSE;
+     $this->movieavailable =MovieSingleton::MovieRenter();
+       if($this->movieavailable == NULL) {
+         $this->movieavailable = FALSE;
      }
        else {
        $this->movieavailable = TRUE;
