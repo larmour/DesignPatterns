@@ -54,7 +54,7 @@ class silverHair extends hairDecorator {
   public $hd;
 // change color to a younger looking color
   public function __construct(hairDecorator $hdIn) {
-    $this->ad = $adIn;
+    $this->hd = $hdIn;
     $this->changeColor();
   }
   function changeColor() {
@@ -87,16 +87,16 @@ class brownHair extends hairDecorator {
   public function __construct(hairDecorator $hdIn) {
     $this->hd->$hdIn;
     $this->changeColor() ;
- }
- function changeColor();
-   $this->hd->color = 'Brown';
+  }
+  function changeColor() {
+    $this->hd->color = 'Brown';
  }
 }
 // Strategy 
 class colorStrategy {
   public $stratey = NULL;
 
-  public funciton __construct(hairDecorator $hdIn, $color) {
+  public function __construct(hairDecorator $hdIn, $color) {
     if($color = 'silver') {
       $this->strategy = new silverHair($hdIn);
     }
@@ -115,7 +115,7 @@ class colorStrategy {
   }
 }
 //instantiate hair and the decorator and change color 
-$myhair = hairFactory::('Long', 'curly', 'blue');
+$myhair = hairFactory::create('Long', 'curly', 'blue');
 $decorator = new hairDecorator($myhair);
 // person fills form to get the color dye they would like and put into strategy
 $color = $POST["color"];
