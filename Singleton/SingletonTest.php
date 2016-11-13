@@ -1,7 +1,7 @@
 <?php
 //initialize
 include ('MovieSingleton.php');
-  include ('MovieRenter.php');
+include ('MovieRenter.php');
     
   writeIn('Singleton Design Pattern Test');
   writeIn('');
@@ -32,7 +32,5 @@ include ('MovieSingleton.php');
 
   writeln('End of the Singleton Program');
 
-  function writeln($line_in) {
-    echo $line_in.'<br/>';
   }
 ?>
