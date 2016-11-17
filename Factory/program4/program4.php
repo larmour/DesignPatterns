@@ -27,7 +27,7 @@ class hair  {
    return $this->getLength() . ' ' . $this->getStyle() ;
  }
 }
-// hair factory is created to make cars 
+// hair factory is created to make hairstyles
 class hairFactory {
   public static function create($length, $style, $color) {
     return new hair($length, $style, $color);
